@@ -29,7 +29,7 @@
     </form>
 
     <!--Display user's email -->
-    <div> Update Email:</div>
+    <div> Update Email 3:</div>
     <form action="#" method="post">
         <label for="email">Email:</label>
         <input type="email" name="email" required><br>
