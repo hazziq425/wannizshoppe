@@ -1,0 +1,22 @@
+/* checkout.css */
+
+/* Center-align text */
+.text-center {
+    text-align: center;
+}
+
+/* Style form input fields */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Style the "Complete Purchase" button */
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
