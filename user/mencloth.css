@@ -1,0 +1,29 @@
+/* Define your CSS class */
+.product-info {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+}
+
+.product-title {
+    color: #333;
+}
+
+.product-gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-price {
+    color: #777;
+}
+
+.product-link {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

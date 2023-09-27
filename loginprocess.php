@@ -1,10 +1,11 @@
 <?php
-include('../connect/connection.php');
+include('connection.php');
 
 if (!empty($_POST['nama']) && !empty($_POST['password'])) {
     
     $username = $_POST['nama'];
     $password = $_POST['password'];
+
     
     $query = "SELECT nama, password FROM signupacc WHERE nama = '$username'";
     $result = mysqli_query($connect, $query);

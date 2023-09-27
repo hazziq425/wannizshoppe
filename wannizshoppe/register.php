@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <div class="header">
-            <?php include'header.php'; ?>
-        </div>
         <title>Register Account</title>
         <link rel="stylesheet" type="text/css" href="#">
     </head>

@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Add New Product</title>
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" type="text/css" href="#">
     </head>
     <body class="body">
     <h1 class="title">Login</h1>
