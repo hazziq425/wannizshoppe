@@ -16,35 +16,35 @@ include('../connect/connection.php');
     <section>
         <div class="container1">
             <div>
-                <a href="Womens-shoes.php">
+                <a href="viewshoes.php">
                     <img src="../images/shoes.jpeg" alt="Women's Shoes">
                 </a>
                 <h4>
-                    <a href="Womens-shoes.php">Women Shoes</a>
+                    <a href="viewshoes.php">Women Shoes</a>
                 </h4>
-                <a href="Womens-shoes.php" class="button">View</a>
+                <a href="viewshoes.php" class="button">View</a>
             </div>
         </div>
         <div class="container2">
             <div>
-                <a href="mens-cloth.php">
+                <a href="viewmencloth.php">
                     <img src="../images/mcloth.jpeg" alt="Men's Cloth">
                 </a>
                 <h4>
-                    <a href="mens-cloth.php">Men's Cloth</a>
+                    <a href="viewmencloth.php">Men's Cloth</a>
                 </h4>
-                <a href="mens-cloth.php" class="button">View</a>
+                <a href="viewmencloth.php" class="button">View</a>
             </div>
         </div>
         <div class="container3">
             <div>
-                <a href="Womens-cloth.php">
+                <a href="viewwomencloth.php">
                     <img src="../images/wcloth.jpeg" alt="Women's Cloth">
                 </a>
                 <h4>
-                    <a href="Womens-cloth.php">Women's Cloth</a>
+                    <a href="viewwomencloth.php">Women's Cloth</a>
                 </h4>
-                <a href="Womens-cloth.php" class="button">View</a>
+                <a href="viewwomencloth.php" class="button">View</a>
             </div>
         </div>
     </section>

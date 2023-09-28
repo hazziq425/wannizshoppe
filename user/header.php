@@ -16,9 +16,9 @@
                     <a href="products.php">Product</a>
                     <div class="submenu">
                         <ul class="submenu-list">
-                            <li><a href="../Womens-shoes.php">Womens shoes</a></li>
-                            <li><a href="../mens-cloth.php">mens cloth</a></li>
-                            <li><a href="../Womens-cloth.php">Womens cloth</a></li>
+                            <li><a href="../viewshoes.php">Womens shoes</a></li>
+                            <li><a href="../viewmencloth.php">mens cloth</a></li>
+                            <li><a href="../viewwomencloth.php">Womens cloth</a></li>
                         </ul>
                     </div>
                 </li>

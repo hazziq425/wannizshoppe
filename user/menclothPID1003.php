@@ -1,7 +1,7 @@
 <?php
 include('../connect/connection.php');
 
-$proid = 'PID1001';
+$proid = 'PID1003';
 
 $viewpro = "select * from bajulelaki where noID='$proid'";
 $proinfo = $connect->query($viewpro);

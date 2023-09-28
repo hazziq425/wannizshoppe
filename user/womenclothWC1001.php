@@ -1,9 +1,9 @@
 <?php
 include('../connect/connection.php');
 
-$proid = 'PID1001';
+$proid = 'WC1001';
 
-$viewpro = "select * from bajulelaki where noID='$proid'";
+$viewpro = "select * from bajuperempuan where noID='$proid'";
 $proinfo = $connect->query($viewpro);
 
 ?>
@@ -13,7 +13,7 @@ $proinfo = $connect->query($viewpro);
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Product Page</title>
-        <link rel="stylesheet" href="product.css">
+        <link rel="stylesheet" href="mencloth.css">
     </head>
     <body>
         <div>
@@ -35,10 +35,10 @@ $proinfo = $connect->query($viewpro);
             </tr>
             <tr>
                 <td>
-                    <a href="addtocartprocess.php?noID=<?php echo $proid; ?>&tableName=bajulelaki">Add to Cart</a>
+                    <a href="addtocartprocess.php?noID=<?php echo $proid; ?>&tableName=bajuperempuan">Add to Cart</a>
                 </td>
                 <td>
-                    <a href="shopcart.php?noID=<?php echo $proid; ?>&tableName=bajulelaki">Shopping Cart</a>
+                    <a href="shopcart.php?noID=<?php echo $proid; ?>&tableName=bajuperempuan">Shopping Cart</a>
                 </td>
             </tr>
             <?php

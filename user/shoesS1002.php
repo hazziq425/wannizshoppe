@@ -1,9 +1,9 @@
 <?php
 include('../connect/connection.php');
 
-$proid = 'PID1001';
+$proid = 'S1002';
 
-$viewpro = "select * from bajulelaki where noID='$proid'";
+$viewpro = "select * from kasut where noID='$proid'";
 $proinfo = $connect->query($viewpro);
 
 ?>
@@ -35,10 +35,10 @@ $proinfo = $connect->query($viewpro);
             </tr>
             <tr>
                 <td>
-                    <a href="addtocartprocess.php?noID=<?php echo $proid; ?>&tableName=bajulelaki">Add to Cart</a>
+                 <a href="addtocartprocess.php?noID=<?php echo $proid; ?>&tableName=kasut">Add to Cart</a>
                 </td>
                 <td>
-                    <a href="shopcart.php?noID=<?php echo $proid; ?>&tableName=bajulelaki">Shopping Cart</a>
+                    <a href="shopcart.php?noID=<?php echo $proid; ?>&tableName=kasut">Shopping Cart</a>
                 </td>
             </tr>
             <?php

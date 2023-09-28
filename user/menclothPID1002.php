@@ -5,35 +5,46 @@ $proid = 'PID1002';
 
 $viewpro = "select * from bajulelaki where noID='$proid'";
 $proinfo = $connect->query($viewpro);
-$data = $proinfo->fetch_assoc();
 
-// Check if the product information is valid
-if ($data) {
-    
-    ?>
+?>
     <!DOCTYPE html>
     <html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Product Page</title>
+        <link rel="stylesheet" href="product.css">
     </head>
     <body>
         <div>
-            <h2>Product Name</h2>
-            <img src="product_image.jpg" alt="Product Image">
-            <p>Price: RM29.99</p>
-            <!-- Display product information here -->
-            <a href="addtocartprocess.php?noID=<?php echo $proid; ?>">Add to Cart</a>
-            <div>
-                <a href="shopcart.php?noID=<?php echo $proid; ?>">Shopping Cart</a>
-            </div>
+        <table class="table">
+            <tr class="row">
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+            <?php
+            
+            while($data=$proinfo->fetch_assoc()){
+            ?>
+            <tr class="row">
+                <td><?php echo $data['category']; ?></td>
+                <td><?php echo $data['price']; ?></td>
+                <td><img src="data:image/jpg;charset=utf8;base64,<?php echo
+                base64_encode($data['image']); ?>" width="50px" height="50px" title="Profile Picture"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="addtocartprocess.php?noID=<?php echo $proid; ?>&tableName=bajulelaki">Add to Cart</a>
+                </td>
+                <td>
+                    <a href="shopcart.php?noID=<?php echo $proid; ?>&tableName=bajulelaki">Shopping Cart</a>
+                </td>
+            </tr>
+            <?php
+            }
+            ?>
+        </table>
         </div>
     </body>
-    </html>
-    <?php
-} else {
-    // Handle the case where the product doesn't exist
-    echo "Product not found.";
-}
-?>
+</html>
