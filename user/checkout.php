@@ -5,7 +5,7 @@ include('../connect/connection.php');
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="your-css-file.css">
+    <link rel="stylesheet" type="text/css" href="checkout.css">
     <div class="header">
         <?php include 'header.php'; ?>
     </div>
@@ -15,6 +15,7 @@ include('../connect/connection.php');
     // Check if a No ID parameter is passed in the URL
     if (isset($_GET['noID'])) {
         $proid = $_GET['noID'];
+        $totalPrice = isset($_GET['totalPrice']) ? $_GET['totalPrice'] : 0;
 
         // Retrieve product details from the database based on $proid
         $viewproduct = "SELECT * FROM bajulelaki WHERE noID='$proid'";
@@ -25,28 +26,29 @@ include('../connect/connection.php');
         if ($data) {
             $productName = $data['category'];
             $size = $data['size'];
-            $quantity = $_SESSION['shopcart'][$proid];
+            $quantity = $_SESSION['newshopcart'][$proid];
 
             // Display the selected product's details along with the checkout form
             echo "<h1 class='checkout-heading'>Checkout</h1>";
 
             echo "<table class='table'>";
-            echo "<tr><th>No ID</th><th>Product Name</th><th>Size</th><th>Quantity</th></tr>";
+            echo "<tr><th>No ID</th><th>Product Name</th><th>Size</th><th>Quantity</th><th>Total Price</th></tr>";
             echo "<tr>";
             echo "<td>$proid</td>";
             echo "<td>$productName</td>";
             echo "<td>$size</td>";
             echo "<td>$quantity</td>";
+            echo "<td>$totalPrice</td>";
             echo "</tr>";
             echo "</table>";
 
             // Add your checkout form fields here (Name, Email, Telephone Number)
-            echo "<form method='post' action='checkoutprocess.php'>";
-            echo "<label for='name'>Name:</label>";
+            echo "<form method='post' action='checkoutprocess.php?totalPrice=$totalPrice'>";
+            echo "<label for='name'>Name:</label><br>";
             echo "<input type='text' id='name' name='name' class='input' required><br><br>";
-            echo "<label for='email'>Email:</label>";
+            echo "<label for='email'>Email:</label><br>";
             echo "<input type='email' id='email' name='email' class='input' required><br><br>";
-            echo "<label for='telno'>Telephone Number:</label>";
+            echo "<label for='telno'>Telephone Number:</label><br>";
             echo "<input type='tel' id='telno' name='telno' class='input' required><br><br>";
             echo "<input type='submit' name='submit' value='Complete Purchase' class='submit'>";
             echo "</form>";
@@ -54,9 +56,9 @@ include('../connect/connection.php');
         } else {
             echo "<p class='error-message'>Product not found.</p>";
         }
-        } else {
-            echo "<p class='error-message'>No No ID parameter specified.</p>";
-        }
+    } else {
+        echo "<p class='error-message'>No No ID parameter specified.</p>";
+    }
     ?>
 </body>
 </html>

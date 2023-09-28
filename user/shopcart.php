@@ -69,8 +69,7 @@ if (isset($_SESSION['newshopcart']) && !empty($_SESSION['newshopcart'])) {
 
                 echo "<td>$price</td>"; // Display the price
                 echo "<td>" . $quantity . "</td>";
-                echo "<td>$totalPrice</td>"; // Display the total price
-                // Add a Checkout link/button with No ID as a parameter
+                echo "<td>$totalPrice</td>"; 
                 echo "<td><a href='checkout.php?noID=$proid&totalPrice=$totalPrice'>Checkout</a></td>";
                 echo "</tr>";
             }
