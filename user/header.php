@@ -7,26 +7,44 @@
     <title>Homepage</title>
 </head>
 <body>
-    <header>
-        <div class="banner">
-            <img src="" alt="Banner" width="1520" height="166">
-        </div>
-    </header>
+<header class="header">
     <nav class="navbar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="register.php">Register</a></li>
-            <li><a href="#">Product</a>
-                <ul>
-                    <li><a href="#">Women's Shoes</a></li>
-                    <li><a href="#">Men's Cloth</a></li>
-                    <li><a href="#">Women's Cloth</a></li>
-                </ul>
-            </li>
-            <li><a href="home.php">About</a></li>
-            <li><a href="logout.php">Contact</a></li>
-            <li><a href="profile.php">Profile</a></li>
-        </ul>
-    </nav><br>
+        <div class="navbar-content">
+            <ul class="navbar-list">
+                <li><a href="home.php">Home</a></li>
+                <li>
+                    <a href="products.php">Product</a>
+                    <div class="submenu">
+                        <ul class="submenu-list">
+                            <li><a href="../Womens-shoes.php">Womens shoes</a></li>
+                            <li><a href="../mens-cloth.php">mens cloth</a></li>
+                            <li><a href="../Womens-cloth.php">Womens cloth</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../About.php">About</a></li>
+                <li><a href="../Contact.php">Contact</a></li>
+                <li><a href="shopcart.php">Shopcart</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="logo">
+        <img src="../images/Wanniz.png" alt="" data-image-width="500" data-image-height="500">
+    </div>
+    <div class="header-links">
+        <a href="javascript:void(0);" onclick="confirmLogout()">Logout</a>
+    </div>
+
+    <script>
+        function confirmLogout() {
+            var confirmation = confirm("Are you sure you want to logout?");
+            if (confirmation) {
+                // If the user confirms, redirect to the logout page
+                window.location.href = "index.php";
+            }
+        }
+    </script>
+
+</header>
 </body>
 </html>

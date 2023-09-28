@@ -23,11 +23,11 @@ if (!empty($_POST['nama']) && !empty($_POST['password'])) {
     }
     // access failed
     $_SESSION['login_error'] = 'Invalid username or password';
-    header('Location: login.php');
+    header('Location: index.php');
     exit;
 } else {
     
-    header('Location: login.php');
+    header('Location: index.php');
     exit;
 }
 ?>

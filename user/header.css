@@ -1,51 +1,107 @@
-/* header.css */
-/* Apply styles to the header */
+/* Add styles for header */
 .header {
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-/* Style the main navigation menu */
-.navbar ul {
-    list-style-type: none;
+
+/* Add styles for navbar */
+.navbar{
+    padding-left: 20px;
+}
+.navbar-content {
+    flex: 1; /* Take up available space */
+}
+
+.navbar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar-list li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; /* Add smooth transition for color change */
+}
+
+/* Add styles for submenu */
+.submenu {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px; /* Adjust the width as needed */
+    text-align: center;
+    z-index: 1;
+    opacity: 0; /* Hide submenu initially */
+    transform: translateY(-10px); /* Move submenu up slightly */
+    transition: opacity 0.3s, transform 0.3s; /* Add smooth transition */
+}
+
+.navbar-list li:hover .submenu {
+    display: block;
+    opacity: 1; /* Show submenu with opacity */
+    transform: translateY(0); /* Reset submenu position */
+}
+
+.submenu-list {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.navbar li {
-    display: inline-block;
-    position: relative;
+.submenu-list li {
+    margin: 10px 0;
 }
 
-.navbar a {
-    display: block;
-    padding: 10px 20px;
+.submenu-list a {
+    color: white;
+    transition: color 0.3s; /* Add smooth transition for color change */
+}
+
+/* Add hover effect for navbar and submenu items */
+.navbar-list li:hover a {
+    color: #ffc107; /* Change color on hover */
+}
+
+.submenu-list li:hover a {
+    color: #ffc107; /* Change color on hover */
+}
+
+
+/* Add styles for logo */
+.logo img {
+    margin-right: 350px;
+    max-width: 100%;
+    width: 150px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Add styles for header links */
+.header-links {
+    margin-right: 30px;
+}
+.header-links a {
     text-decoration: none;
-    color: #ffffff; /* Text color */
+    color: white;
+    margin-left: 20px;
+    transition: color 0.3s; /* Add smooth transition for color change */
 }
 
-/* Style the submenu */
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%; /* Position the submenu below the parent item */
-    left: 0;
-    background-color: #fff; /* Background color of submenu */
-    border: 1px solid #ccc;
-    z-index: 1; /* Ensure the submenu appears above other content */
-}
-
-.has-submenu:hover .submenu {
-    display: block; /* Show the submenu on hover */
-}
-
-.submenu li {
-    display: block;
-}
-
-/* Style submenu items */
-.submenu a {
-    padding: 10px 20px;
-    color: #333;
+.header-links a:hover {
+    color: #ffc107; /* Change color on hover */
 }

@@ -1,61 +1,47 @@
-/* Body Styles */
+/* Style for the body */
 .body {
     background-image: url('../images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.7);
     height: 300px;
-}
-
-/* Form Styles */
-.u-form {
-    background-color: #FFFFFF;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0.9;
-}
-
-.u-form-group {
-    margin-bottom: 15px;
-}
-
-/* Title Styles */
-.title {
-    text-align: center;
     font-family: "Trebuchet MS";
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #FFFFFF;
+    text-align: center;
+    margin-top: 100px;
+    font-variant: small-caps;
 }
 
-/* Label Styles */
-label {
+/* Style for the form container */
+.form {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+/* Style for the form labels */
+.label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-/* Input and Textarea Styles */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="tel"],
-textarea {
-    width: 97%; /* Adjusted to 100% width for responsiveness */
+/* Style for the form inputs */
+.input {
+    width: 90%;
     padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 16px;
 }
 
-/* Button Styles */
-.u-btn-1 input[type="submit"] {
+/* Style for the submit button */
+.submit {
     background-color: #333333;
     color: #ffffff;
     border: none;
@@ -70,24 +56,31 @@ textarea {
     text-align: center; /* Center the text within the button */
 }
 
-.u-btn-1 input[type="submit"]:hover {
+/* Style for the submit button on hover */
+.submit:hover {
     background-color: #c5b32b;
 }
-/* Style for the login link */
-.login-link {
+
+/* Style for the form title */
+.title {
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+.register-link{
     color: #FFFFFF;
     font-size: 18px;
     text-align: center;
     margin-top: 20px;
 }
-
-.login-link a {
+.register-link a{
     text-decoration: none;
     color: #007bff; /* Link color */
     font-weight: bold;
 }
-
-.login-link a:hover {
+.register-link a:hover {
     text-decoration: underline; /* Underline on hover */
 }
-

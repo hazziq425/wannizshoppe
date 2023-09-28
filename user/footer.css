@@ -1,24 +1,18 @@
-/* Style the footer */
-.footer-content {
+/* Add styles for the footer */
+footer {
+    font-family: "Trebuchet MS";
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
-    font-size: 16px;
+    font-size: 20px;
 }
-
-.footer-content p {
-    margin: 10px 0;
-}
-
-/* Style links in the footer */
-.footer-content a {
-    color: white;
+footer p {
     text-decoration: none;
-    transition: color 0.3s;
+    color: #FFFFFF; /* Footer link color */
+    transition: color 0.3s; /* Add smooth color transition on hover */
 }
 
-.footer-content a:hover {
-    color: #555;
+footer p:hover {
+    color: #ffc107; /* Change link color on hover */
 }
-

@@ -1,34 +1,46 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <div class="header">
-            <?php include'header.php'; ?>
-        </div>
-        <title>Register Account</title>
-        <link rel="stylesheet" type="text/css" href="#">
-    </head>
-    <body class="body">
-        
-    <form class="form" name="Register account" method="post" action="registerprocess.php">
-        <label>Name</label><br>
-        <input class="input" name="nama" type="text"><br>
+<html style="font-size: 16px;" lang="en">
 
-        <label>Password</label><br>
-        <input class="input" name="password" type="password"><br>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Welcome To Wanniz Shoppe">
+    <meta name="description" content="">
+    <title>Wanniz Shoppe</title>
+    <link rel="icon" href="images/Wanniz.png">
+    <link rel="stylesheet" href="register.css" media="screen">
+</head>
+<body class="body">
+<h1 class="title">Register</h1>
+<form class="u-form" name="Register account" method="post" action="registerprocess.php">
+    <div class="u-form-group">
+        <input class="u-form-control" name="nama" type="text" placeholder="Full Name"><br>
+    </div>
 
-        <label>Age</label><br>
-        <input class="input" name="age" type="number" min="0"><br><br>
+    <div class="u-form-group">
+        <input class="u-form-control" name="password" type="text" placeholder="Password"><br>
+    </div>
 
-        <label>Email</label><br>
-        <input class="input" name="email" type="email" placeholder="text@gmail.com"><br><br>
+    <div class="u-form-group">
+        <input class="u-form-control" name="age" type="number" min="0" placeholder="Age"><br>
+    </div>
 
-        <label>Telephone No.</label><br>
-        <input class="input" name="phone" type="tel" placeholder="+60"><br><br>
+    <div class="u-form-group">
+        <input class="u-form-control" name="email" type="email" placeholder="Email (e.g., text@gmail.com)">
+    </div>
 
-        <label>Address</label><br>
-        <textarea class="input" name="address" rows="5" cols="40"></textarea><br><br>
+    <div class="u-form-group">
+        <input class="u-form-control" name="phone" type="tel" placeholder="Phone Number (e.g., +60)"><br>
+    </div>
 
+    <div class="u-form-group">
+        <textarea class="u-form-control" name="address" rows="5" cols="100" placeholder="Address"></textarea><br><br>
+    </div>
+
+    <div class="u-btn-1">
         <input class="submit" name="send" type="submit" value="Register">
-    </form>
-    </body>
+    </div>
+</form>
+<p class="login-link">Already have an account? <a href="index.php">Login here</a></p>
+</body>
 </html>
