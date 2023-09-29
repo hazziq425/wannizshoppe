@@ -1,0 +1,52 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.row {
+    background-color: #f2f2f2;
+}
+
+/* Style the table header */
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style the product image */
+td.image {
+    width: 30%; /* Adjust the width as needed */
+}
+.image-container img{
+    padding-left: 200px;
+    width: 400px;
+    height: auto;
+}
+
+/* Style the product details */
+td.details {
+    width: 70%; /* Adjust the width as needed */
+}
+.product-info{
+    padding-right: 200px;
+}
+/* Style the links */
+.link a {
+    text-decoration: none;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 30px; /* Adjusted to auto width for button text */
+    transition: background-color 0.3s;
+    text-align: center; /* Center the text within the button */
+}
+
+.link a:hover {
+    background-color: #c5b32b;
+}

@@ -11,14 +11,14 @@
     <nav class="navbar">
         <div class="navbar-content">
             <ul class="navbar-list">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li>
                     <a href="products.php">Product</a>
                     <div class="submenu">
                         <ul class="submenu-list">
-                            <li><a href="../viewshoes.php">Womens shoes</a></li>
-                            <li><a href="../viewmencloth.php">mens cloth</a></li>
-                            <li><a href="../viewwomencloth.php">Womens cloth</a></li>
+                            <li><a href="viewshoes.php">Womens shoes</a></li>
+                            <li><a href="viewmencloth.php">mens cloth</a></li>
+                            <li><a href="viewwomencloth.php">Womens cloth</a></li>
                         </ul>
                     </div>
                 </li>
@@ -40,7 +40,7 @@
             var confirmation = confirm("Are you sure you want to logout?");
             if (confirmation) {
                 // If the user confirms, redirect to the logout page
-                window.location.href = "index.php";
+                window.location.href = "login.php";
             }
         }
     </script>

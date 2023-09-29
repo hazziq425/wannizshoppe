@@ -41,6 +41,6 @@
         <input class="submit" name="send" type="submit" value="Register">
     </div>
 </form>
-<p class="login-link">Already have an account? <a href="index.php">Login here</a></p>
+<p class="login-link">Already have an account? <a href="login.php">Login here</a></p>
 </body>
 </html>

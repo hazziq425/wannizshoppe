@@ -1,6 +1,19 @@
+<div>
+    <?php include 'header.php'; ?>
+</div>
 <?php
 include('../connect/connection.php');
-
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shopcart.css">
+    <title>ShopCart</title>
+</head>
+<body>
+<?php
 if (isset($_SESSION['newshopcart']) && !empty($_SESSION['newshopcart'])) {
     echo "<h1>Shopping Cart</h1>";
 
@@ -70,7 +83,7 @@ if (isset($_SESSION['newshopcart']) && !empty($_SESSION['newshopcart'])) {
                 echo "<td>$price</td>"; // Display the price
                 echo "<td>" . $quantity . "</td>";
                 echo "<td>$totalPrice</td>"; 
-                echo "<td><a href='checkout.php?noID=$proid&totalPrice=$totalPrice'>Checkout</a></td>";
+                echo "<td><a class='link' href='checkout.php?noID=$proid&totalPrice=$totalPrice'>Checkout</a></td>";
                 echo "</tr>";
             }
         }
@@ -81,3 +94,8 @@ if (isset($_SESSION['newshopcart']) && !empty($_SESSION['newshopcart'])) {
     echo "<p>Your shopping cart is empty.</p>";
 }
 ?>
+<div>
+    <?php include 'footer.php'; ?>
+</div>
+</body>
+</html>

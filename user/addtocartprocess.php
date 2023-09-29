@@ -21,19 +21,19 @@ $data = $proinfo->fetch_assoc();
 // Check if the product information is valid
 if ($data) {
     // Check if the cart session exists
-    if (!isset($_SESSION['shopcart'])) {
-        $_SESSION['shopcart'] = array();
+    if (!isset($_SESSION['newshopcart'])) {
+        $_SESSION['newshopcart'] = array();
     }
 
     // Check if the product is already in the cart
     $proid = $data['noID'];
     
-    if (isset($_SESSION['shopcart'][$proid])) {
+    if (isset($_SESSION['newshopcart'][$proid])) {
         // If the product is already in the cart, increase the quantity
-        $_SESSION['shopcart'][$proid]++;
+        $_SESSION['newshopcart'][$proid]++;
     } else {
         // If the product is not in the cart, add it with quantity 1
-        $_SESSION['shopcart'][$proid] = 1;
+        $_SESSION['newshopcart'][$proid] = 1;
     }
 }
 

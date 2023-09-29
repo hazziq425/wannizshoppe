@@ -16,6 +16,9 @@ $proinfo = $connect->query($viewpro);
         <link rel="stylesheet" href="product.css">
     </head>
     <body>
+    <div>
+        <?php include 'header.php'; ?>
+    </div>
         <div>
         <table class="table">
             <tr class="row">
@@ -46,5 +49,6 @@ $proinfo = $connect->query($viewpro);
             ?>
         </table>
         </div>
+    <?php include 'footer.php'; ?>
     </body>
 </html>

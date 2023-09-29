@@ -1,45 +1,73 @@
-/* Checkout Page Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
+/* Style your checkout page */
 .checkout-heading {
-    font-size: 24px;
+    text-align: center;
+    font-size: 34px;
     margin: 20px 0;
 }
 
-.product-info {
-    margin: 10px 0;
-}
-
-.checkout-input {
+.table {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    background-color: #777777;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.checkout-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Style your checkout form */
+.form-container {
+    width: 50%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.input {
+    width: 95%; /* Make input fields full-width within the form */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.submit {
+    background-color: #333333;
+    color: #ffffff;
     border: none;
     border-radius: 4px;
+    padding: 10px 20px;
+    margin: 0 auto; /* Center the button horizontally */
+    margin-bottom: 30px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center; /* Center the text within the button */
+    display: block; /* Make it a block element for centering */
+    width: fit-content; /* Adjust width to fit the content */
 }
 
-.checkout-button:hover {
-    background-color: #555;
+.submit:hover {
+    background-color: #c5b32b;
 }
+

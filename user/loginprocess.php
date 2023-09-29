@@ -17,17 +17,17 @@ if (!empty($_POST['nama']) && !empty($_POST['password'])) {
             $_SESSION['username'] = $username;
 
             // access granted
-            header('Location: home.php');
+            header('Location: index.php');
             exit;
         }
     }
     // access failed
     $_SESSION['login_error'] = 'Invalid username or password';
-    header('Location: index.php');
+    header('Location: login.php');
     exit;
 } else {
     
-    header('Location: index.php');
+    header('Location: login.php');
     exit;
 }
 ?>
