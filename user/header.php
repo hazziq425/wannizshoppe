@@ -24,7 +24,6 @@
                 </li>
                 <li><a href="../About.php">About</a></li>
                 <li><a href="../Contact.php">Contact</a></li>
-                <li><a href="shopcart.php">Shopcart</a></li>
             </ul>
         </div>
     </nav>
@@ -33,6 +32,7 @@
     </div>
     <div class="header-links">
         <a href="javascript:void(0);" onclick="confirmLogout()">Logout</a>
+        <a href="javascript:void(0);" onclick="confirmRegistration()">Register</a>
     </div>
 
     <script>
@@ -43,7 +43,16 @@
                 window.location.href = "login.php";
             }
         }
+
+        function confirmRegistration() {
+            var confirmation = confirm("Are you sure you want to register?");
+            if (confirmation) {
+                // If the user confirms, redirect to the registration page
+                window.location.href = "register.php";
+            }
+        }
     </script>
+
 
 </header>
 </body>
