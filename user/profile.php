@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <div class="header">
-        <?php include'header.php'; ?>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="profile.css"> <!-- Add your profile-specific CSS file -->
     <title>Profile</title>
 </head>
 <body>
-    <div>Profile Page</div>
+<div>
+    <?php include 'header.php'; ?>
+</div>
+<div class="profile-container"> <!-- Add a container for the profile content -->
+    <div class="profile-header">Profile Page</div>
 
     <!-- Display user's name -->
-    <div>Name:</div><br>
+    <div class="profile-section">
+        <div class="profile-label">Name:</div>
+        <!-- Add your PHP code to display the user's name here -->
+    </div>
 
     <!-- Change Password Form -->
-    <div>Change Password</div>
-    <form action="#" method="post">
-        <label for="currentpassword">Current Password:</label>
-        <input type="password" name="currentpassword" required><br>
+    <div class="profile-section">
+        <div class="profile-label">Change Password</div>
+        <form action="#" method="post">
+            <label for="currentpassword">Current Password:</label>
+            <input type="password" name="currentpassword" required><br>
 
-        <label for="newpassword">New Password:</label>
-        <input type="password" name="newpassword" required><br>
+            <label for="newpassword">New Password:</label>
+            <input type="password" name="newpassword" required><br>
 
-        <label for="confirmpassword">Confirm New Password:</label>
-        <input type="password" name="confirmpassword" required><br>
+            <label for="confirmpassword">Confirm New Password:</label>
+            <input type="password" name="confirmpassword" required><br>
 
-        <input type="submit" value="Change Password">
-    </form>
+            <input type="submit" value="Change Password">
+        </form>
+    </div>
 
-    <!--Display user's email -->
-    <div> Update Email:</div>
-    <form action="#" method="post">
-        <label for="email">Email:</label>
-        <input type="email" name="email" required><br>
+    <!-- Display user's email -->
+    <div class="profile-section">
+        <div class="profile-label">Update Email:</div>
+        <form action="#" method="post">
+            <label for="email">Email:</label>
+            <input type="email" name="email" required><br>
 
-        <input type="submit" value="Change Email">
-    </form>
+            <input type="submit" value="Change Email">
+        </form>
+    </div>
 
-    <!--Display user's telephone no -->
-        <div>Update Telephone No:</div>
-    <form action="#" method="post">
-        <label for="telno">Telephone No:</label>
-        <input type="tel" name="tel" required><br>
+    <!-- Display user's telephone no -->
+    <div class="profile-section">
+        <div class="profile-label">Update Telephone No:</div>
+        <form action="#" method="post">
+            <label for="telno">Telephone No:</label>
+            <input type="tel" name="tel" required><br>
 
-        <input type="submit" value="Change Telephone No">
-    </form>
+            <input type="submit" value="Change Telephone No">
+        </form>
+    </div>
 
     <!-- Update Address Form -->
-    <div>Update Address</div>
-    <form action="#" method="post">
-        <label for="address">Address:</label>
-        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br>
+    <div class="profile-section">
+        <div class="profile-label">Update Address</div>
+        <form action="#" method="post">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br>
 
-        <input type="submit" value="Update Address">
-    </form>
+            <input type="submit" value="Update Address">
+        </form>
+    </div>
 
     <!-- Additional profile information and actions can be added here -->
-
+</div>
+<div>
+    <?php include 'footer.php'; ?>
+</div>
 </body>
 </html>

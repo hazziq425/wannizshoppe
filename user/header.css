@@ -82,8 +82,13 @@
 
 
 /* Add styles for logo */
+.logo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
 .logo img {
-    margin-right: 200px;
     max-width: 100%;
     width: 150px;
 }
@@ -91,6 +96,7 @@
 .logo img:hover {
     transform: scale(1.1);
 }
+
 
 
 /* Add styles for header links */
@@ -101,7 +107,7 @@
     text-decoration: none;
     color: white;
     margin-left: 20px;
-    transition: color 0.3s; /* Add smooth transition for color change */
+    transition: color 0.8s; /* Add smooth transition for color change */
 }
 
 .header-links a:hover {

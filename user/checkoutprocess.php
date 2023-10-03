@@ -4,8 +4,6 @@ if (isset($_POST['submit'])) {
 
     $harga = $_GET['totalPrice'];
 
-    // Retrieve user information from the database based on user session or other criteria
-    session_start();
     if (isset($_SESSION['nama'])) {
         $username = $_SESSION['nama'];
 
