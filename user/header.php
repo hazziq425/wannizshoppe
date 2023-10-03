@@ -22,6 +22,7 @@
                         </ul>
                     </div>
                 </li>
+                <li><a href="shopcart.php">Shopping Cart</li>
                 <li><a href="../About.php">About</a></li>
                 <li><a href="../Contact.php">Contact</a></li>
             </ul>

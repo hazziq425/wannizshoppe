@@ -5,6 +5,8 @@ if (!empty($_POST['nama']) && !empty($_POST['password'])) {
     
     $username = $_POST['nama'];
     $password = $_POST['password'];
+
+    $useremail = $_POST['email'];
     
     $query = "SELECT nama, password FROM signupacc WHERE nama = '$username'";
     $result = mysqli_query($connect, $query);

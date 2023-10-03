@@ -11,15 +11,16 @@ if (isset($_SESSION['proid'])) {
         $quantity = $_POST['quantity'];
         $category = $_POST['category'];
         $price = $_POST['price'];
-        
+
         // You can insert this data into your shopcart table or perform any other desired actions
         // For example, you can insert this data into your shopcart table as follows:
         $insertQuery = "INSERT INTO shopcart (noID, category, price, quantity, size, color) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $connect->prepare($insertQuery);
         $stmt->bind_param("ssssss", $proid, $category, $price, $quantity, $size, $color);
         if ($stmt->execute()) {
-            // Insertion was successful, you can redirect or display a confirmation message
-            header("Location: from previous page.php");
+            // Insertion was successful, you can redirect back to the previous page
+            $previousPage = $_SERVER['HTTP_REFERER'];
+            header("Location: $previousPage");
             exit;
         } else {
             // Handle the case where the insertion failed

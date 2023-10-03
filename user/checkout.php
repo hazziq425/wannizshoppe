@@ -38,15 +38,17 @@ if (isset($_GET['cartData'])) {
     echo "<p>Total Price: RM $totalPrice</p>";
 
     echo "<div class='form-container'>";
-    echo "<form method='post' action='checkoutprocess.php?totalPrice=$totalPrice'>";
-    echo "<label for='name' class='form-label'>Name:</label><br>";
-    echo "<input type='text' id='name' name='name' class='input' required><br>";
-    echo "<label for='email' class='form-label'>Email:</label><br>";
-    echo "<input type='email' id='email' name='email' class='input' required><br>";
-    echo "<label for='telno' class='form-label'>Telephone Number:</label><br>";
-    echo "<input type='tel' id='telno' name='telno' class='input' required><br><br>";
-    echo "<input type='submit' name='submit' value='Complete Purchase' class='submit'>";
-    echo "</form>";
+        echo "<form method='post' action='checkoutprocess.php?totalPrice=$totalPrice'>";
+        echo "<label for='name' class='form-label'>Name:</label><br>";
+        echo "<input type='text' id='name' name='name' class='input' value='" . $_SESSION['nama'] . "' required><br>";
+        echo "<label for='email' class='form-label'>Email:</label><br>";
+        echo "<input type='email' id='email' name='email' class='input' value='" . $_SESSION['email'] . "' required><br>";
+        echo "<label for='telno' class='form-label'>Telephone Number:</label><br>";
+        echo "<input type='tel' id='telno' name='telno' class='input' value='" . $_SESSION['phone'] . "' required><br><br>";
+        echo "<label for='address' class='form-label'>Address</label><br>";
+        echo "<textarea id='address' name='address' rows='5' cols='100' class='input' required>" . $_SESSION['address'] . "</textarea><br><br>";
+        echo "<input type='submit' name='submit' value='Complete Purchase' class='submit'>";
+        echo "</form>";
     echo "</div>";
 } else {
     echo "<p class='error-message'>No cart data found.</p>";
