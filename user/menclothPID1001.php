@@ -36,9 +36,8 @@ $proinfo = $connect->query($viewpro);
                         <h3><?php echo $data['category']; ?></h3>
                         <p>Price: RM <?php echo $data['price']; ?></p>
                         <div class="link">
-                            
-                        <button id="showFormButton">Add to Cart</button>
-                            <form id="addToCartForm" method="post" action="addtocartprocess.php">
+                            <button id="showFormButton">Add to Cart</button>
+                            <form id="addToCartForm" method="post" action="addtocartprocess.php" style="display: none;">
                                 <input type="hidden" name="noID" value="<?php echo $proid; ?>">
                                 <input type="hidden" name="category" value="<?php echo $data['category']; ?>">
                                 <input type="hidden" name="price" value="<?php echo $data['price']; ?>">
@@ -57,7 +56,9 @@ $proinfo = $connect->query($viewpro);
                                 <input type="text" id="quantity" name="quantity" required><br>
 
                                 <input type="submit" value="Add to Cart">
+                                <button id="hideFormButton">Back</button>
                             </form>
+                            <button id="back" onclick="goBack()">Back</button>
                         </div>
                     </div>
                 </td>
@@ -69,18 +70,24 @@ $proinfo = $connect->query($viewpro);
 </div>
 <?php include 'footer.php'; ?>
 
-
 <script>
-// JavaScript to toggle the visibility of the form
-document.addEventListener("DOMContentLoaded", function() {
-    var showFormButton = document.getElementById("showFormButton");
-    var addToCartForm = document.getElementById("addToCartForm");
+    function goBack() {
+        window.history.back();
+    }
 
-    showFormButton.addEventListener("click", function() {
-        addToCartForm.style.display = "block"; // Show the form
-        showFormButton.style.display = "none"; // Hide the button
+    document.addEventListener("DOMContentLoaded", function() {
+        var showFormButton = document.getElementById("showFormButton");
+        var addToCartForm = document.getElementById("addToCartForm");
+        var hideFormButton = document.getElementById("hideFormButton");
+
+        showFormButton.addEventListener("click", function() {
+            addToCartForm.style.display = "block"; // Show the form
+        });
+
+        hideFormButton.addEventListener("click", function() {
+            addToCartForm.style.display = "none"; // Hide the form
+        });
     });
-});
 </script>
 </body>
 </html>

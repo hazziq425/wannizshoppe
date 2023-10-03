@@ -22,8 +22,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="../About.php">About</a></li>
-                <li><a href="../Contact.php">Contact</a></li>
+                <li><a href="Contact.php">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -31,6 +30,7 @@
         <img src="../images/Wanniz.png" alt="" data-image-width="500" data-image-height="500">
     </div>
     <div class="header-links">
+        <a href="profile.php">Profile</a>
         <a href="javascript:void(0);" onclick="confirmLogout()">Logout</a>
         <a href="javascript:void(0);" onclick="confirmRegistration()">Register</a>
     </div>

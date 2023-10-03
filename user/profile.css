@@ -1,32 +1,28 @@
-/* Reset some default styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the header */
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Style the profile content */
-.container {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 80%;
-    margin: 20px auto;
+/* Style the container for the profile content */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style form labels */
-label {
+/* Style the profile header */
+.profile-header {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style profile sections */
+.profile-section {
+    margin-bottom: 20px;
+}
+
+/* Style profile labels */
+.profile-label {
     font-weight: bold;
 }
 
@@ -38,28 +34,38 @@ input[type="tel"],
 textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
-/* Style the submit button */
+/* Style the submit buttons */
 input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #333333;
+    color: #ffffff;
     border: none;
-    border-radius: 3px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
+    width: auto; /* Adjusted to auto width for button text */
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Center the button */
+    transition: background-color 0.3s;
+    text-align: center; /* Center the text within the button */
 }
 
+/* Add hover effect for submit buttons */
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #c5b32b;
 }
 
-/* Add responsive styles for smaller screens */
-@media screen and (max-width: 600px) {
-    .container {
-        width: 90%;
-    }
+/* Add styles for links (if needed) */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
