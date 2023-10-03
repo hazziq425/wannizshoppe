@@ -34,7 +34,7 @@ $proinfo = $connect->query($viewpro);
                         <h3><?php echo $data['category']; ?></h3>
                         <p>Price: RM <?php echo $data['price']; ?></p>
                         <div class="link">
-                            <a href="addtocartprocess.php?noID=<?php echo $proid; ?>&tableName=bajuperempuan">Add to Cart</a>
+                            <a href="addtocartinfo.php?noID=<?php echo $proid; ?>&tableName=bajuperempuan">Add to Cart</a>
                             <a href="shopcart.php?noID=<?php echo $proid; ?>&tableName=bajuperempuan">Shopping Cart</a>
                         </div>
                     </div>
