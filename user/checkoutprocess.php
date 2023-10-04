@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
         $stmt->bind_param('sssssid', $noID, $category, $email, $size, $color, $quantity, $itemTotalPrice);
 
         if ($stmt->execute()) {
-            // Insertion for this product was successful
+            // Insertion for this product was successfully
         } else {
             // Handle insertion failure for this product
             echo "Failed to insert purchase information for product: $category";
