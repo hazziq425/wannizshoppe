@@ -21,8 +21,8 @@
                             <li><a href="viewwomencloth.php">Womens cloth</a></li>
                         </ul>
                     </div>
-                </li><a href="about.php">About</a></li>
-                </li><a href="shopcart.php">Shopping Cart</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="shopcart.php">Shopping Cart</a></li>
                 <li><a href="Contact.php">Contact</a></li>
             </ul>
         </div>

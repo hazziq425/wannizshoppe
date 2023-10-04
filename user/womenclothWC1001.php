@@ -4,6 +4,8 @@ include 'header.php';
 
 $proid = 'WC1001';
 
+$_SESSION['proid'] = $proid;
+
 $viewpro = "select * from bajuperempuan where noID='$proid'";
 $proinfo = $connect->query($viewpro);
 
@@ -67,6 +69,7 @@ $proinfo = $connect->query($viewpro);
     </table>
 </div>
 <?php include 'footer.php'; ?>
+
 
 <script>
     function goBack() {

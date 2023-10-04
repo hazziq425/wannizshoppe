@@ -7,12 +7,14 @@ if (isset($_GET['cartData'])) {
     $cartData = json_decode(urldecode($_GET['cartData']), true);
 
     // Initialize total price to zero
+    $_SESSION['cartData'] = $cartData;
     $totalPrice = 0;
 
     echo "<table class='table'>";
     echo "<tr><th>No ID</th><th>Product Name</th><th>Size</th><th>Color</th><th>Quantity</th><th>Total Price</th></tr>";
 
     foreach ($cartData as $item) {
+        $noID = $item['noID'];
         $productName = $item['category'];
         $price = $item['price'];
         $size = $item['size'];
@@ -23,7 +25,7 @@ if (isset($_GET['cartData'])) {
         $totalPrice += $itemTotalPrice; // Add the item's total price to the overall total
 
         echo "<tr>";
-        echo "<td>No ID</td>"; // Replace with your appropriate value
+        echo "<td>$noID</td>"; // Replace with your appropriate value
         echo "<td>$productName</td>";
         echo "<td>$size</td>";
         echo "<td>$color</td>";
@@ -37,8 +39,16 @@ if (isset($_GET['cartData'])) {
     // Display the total price for all products
     echo "<p>Total Price: RM $totalPrice</p>";
 
+    $_SESSION['noID'] = $noID;
+    $_SESSION['category'] = $productName;
+    $_SESSION['price'] = $price;
+    $_SESSION['size'] = $size;
+    $_SESSION['color'] = $color;
+    $_SESSION['quantity'] = $quantity;
+    $_SESSION['totalPrice'] = $totalPrice;
+
     echo "<div class='form-container'>";
-        echo "<form method='post' action='checkoutprocess.php?totalPrice=$totalPrice'>";
+        echo "<form method='post' action='checkoutprocess.php'>";
         echo "<label for='name' class='form-label'>Name:</label><br>";
         echo "<input type='text' id='name' name='name' class='input' value='" . $_SESSION['nama'] . "' required><br>";
         echo "<label for='email' class='form-label'>Email:</label><br>";
